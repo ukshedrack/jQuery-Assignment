@@ -1,6 +1,8 @@
 // Question 14
 $(document).ready(function(){
 	$("thead").css({"background-color":"blue", "color":"white"});
+
+    // Adding rows to Table
 	$(".add-row").click(function(){
         var category = $("#category").val();
         var name = $("#name").val();
@@ -17,9 +19,29 @@ $(document).ready(function(){
         $("#category").val("");
         $("#name").val("");
         $("#rating").val("");
+    });
 
-        $("td button").click(function(){
-        	$(this).parents("tr").remove();
-        })
+    // Deleting a row
+    $("td button").click(function(){
+        $(this).parents("tr").remove();
+    });
+
+    // Sorting Table by Names
+    $(".sort-table").click(function(){
+        var rows = $('table tbody  tr').get();
+        rows.sort(function(a, b) {
+            var A = $(a).children('td').eq(1).text().toUpperCase();
+            var B = $(b).children('td').eq(1).text().toUpperCase();
+            if(A < B) {
+                return -1;
+            }
+            if(A > B) {
+                return 1;
+            }
+            return 0;
+        });
+        $.each(rows, function(index, row) {
+            $('table').children('tbody').append(row);
+        });
     });
 });
