@@ -19,14 +19,14 @@ $(document).ready(function(){
         $("#category").val("");
         $("#name").val("");
         $("#rating").val("");
-    });
 
-    // Deleting a row
-    $("td button").click(function(){
-        $(this).parents("tr").remove();
+        // Deleting a row
+        $("td button").click(function(){
+            $(this).parents("tr").remove();
+        });
     });
-
-    // Sorting Table by Names
+    
+    //Sorting Table by Names
     $(".sort-table").click(function(){
         var rows = $('table tbody  tr').get();
         rows.sort(function(a, b) {
