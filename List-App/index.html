@@ -7,26 +7,49 @@
 	<title>List Category</title>
 </head>
 <body>
-	<form>
-		Category
-        <input type="text" id="category" placeholder="sports">
-        Name
-        <input type="text" id="name" placeholder="football">
-        Rating
-        <input type="number" id="rating" name="rating" min="1" max="5">
-        <input type="button" class="add-row" value="Add Row">
-        <input type="button" class="sort-table" value="sort">
-    </form>
-	<table>
-		<thead>
-	        <tr>
-	           	<th>Category</th>
-	            <th>Name</th>
-	            <th>Ratings</th>
-	            <th><button class="delete" disabled>delete</button></th>
-	        </tr>
-	    </thead>
-	</table>
+	<h1>List App</h1>
+	<div class="list">
+		<div class="form">
+			<form>
+				<div>
+					Category<br>
+					<select id="category">
+						<option>Select a category</option>
+						<option>Movies</option>
+						<option>Albums</option>
+						<option>Sports</option>
+						<option>Dance</option>
+						<option>Celebrities</option>
+						<option>Books</option>
+					</select>
+				</div>
+				<br>
+				<div>
+					Name<br>
+		        	<input type="text" id="name" placeholder="football">
+				</div>
+				<br>
+				<div>
+					Rating<br>
+		        	<input type="number" id="rating" name="rating" min="1" max="5">
+				</div><br>
+		        <input type="button" class="add-row" value="Add Row"><br>
+		        <input type="button" class="sort-table" value="sort">
+		    </form>
+		</div>
+		<div class="table">
+			<table>
+				<thead>
+			        <tr>
+			           	<th>Category</th>
+			            <th>Name</th>
+			            <th>Ratings</th>
+			            <th></th>
+			        </tr>
+			    </thead>
+			</table>
+		</div>
+	</div>
 
 	<script id="script" src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script type="text/javascript" src="script.js"></script>

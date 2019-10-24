@@ -1,8 +1,20 @@
 body{
 	margin: 2em;
 }
+.list{
+	display: flex;
+}
+h1{
+	text-align: center;
+}
+.form, .table{
+	width: 40%;
+}
+select, input{
+	width: 80%;
+}
 table{
-	width: 50%;
+	width: 100%;
     margin: 20px 0;
 	border-collapse: collapse;
 }
@@ -12,6 +24,5 @@ table, th, td{
 }
 
 table th, table td{
-	padding: 5px;
 	text-align: center;
 }
